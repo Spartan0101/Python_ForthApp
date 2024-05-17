@@ -1,5 +1,69 @@
 #Randomization (Mersenne Twister) and python lists
 import random
+# Rock paper scissors
+rock = """
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+
+# Paper
+paper = """
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+
+# Scissors
+scissors = """
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+game_images = [rock, paper, scissors]
+
+user_choise = int(input("Type 0 for rock, 1 for paper, 2 for scissors: \n"))
+if user_choise >= 3 or user_choise < 0:
+    print("Invalid number. You lose!")
+else:
+    print(game_images[user_choise])
+random_RPC = random.randint(0, 2)
+print(f"Computer chose: \n{game_images[random_RPC]}")
+
+
+if user_choise == 0 and random_RPC == 2:
+    print("You win!")
+elif user_choise == 2 and random_RPC == 0:
+    print("You lose")
+elif random_RPC > user_choise:
+    print("You lose")
+elif user_choise > random_RPC:
+    print("You win!")
+elif random_RPC == user_choise:
+    print("It's a draw")
+
+
+
+
+
+
+# rock wins against scissors, paper wins against rock, and scissors wins against paper
+#Nested lists
+'''
+fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+vegetable = ["carrot", "broccoli", "cabbage", "celery", "turnip"]
+dirty_dozen = [fruits, vegetable]
+print(dirty_dozen[1][1])
+'''
 
 # Baker roulette App
 '''
