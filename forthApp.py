@@ -31,24 +31,24 @@ scissors = """
 """
 game_images = [rock, paper, scissors]
 
-user_choise = int(input("Type 0 for rock, 1 for paper, 2 for scissors: \n"))
-if user_choise >= 3 or user_choise < 0:
+user_choice = int(input("Type 0 for rock, 1 for paper, 2 for scissors: \n"))
+if user_choice >= 3 or user_choice < 0:
     print("Invalid number. You lose!")
 else:
-    print(game_images[user_choise])
+    print(game_images[user_choice])
 random_RPC = random.randint(0, 2)
 print(f"Computer chose: \n{game_images[random_RPC]}")
 
 
-if user_choise == 0 and random_RPC == 2:
+if user_choice == 0 and random_RPC == 2:
     print("You win!")
-elif user_choise == 2 and random_RPC == 0:
+elif user_choice == 2 and random_RPC == 0:
     print("You lose")
-elif random_RPC > user_choise:
+elif random_RPC > user_choice:
     print("You lose")
-elif user_choise > random_RPC:
+elif user_choice > random_RPC:
     print("You win!")
-elif random_RPC == user_choise:
+elif random_RPC == user_choice:
     print("It's a draw")
 
 
